@@ -137,7 +137,7 @@ function validateAction(req, res, next) {
   // do your magic!
   const aData = req.body;
 
-  if ((aData.notes, data.description)) {
+  if ((aData.notes, aData.description)) {
     next();
   } else {
     // req.text = text;

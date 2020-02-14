@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
       res.status(200).json(action);
     })
     .catch(error => {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({ error: "not working" });
     });
 });
 
@@ -32,7 +32,7 @@ router.delete("/:id", validateActionId, (req, res) => {
   actions
     .get(id)
     .then(deleted => {
-      projects
+      actions
         .remove(deleted.id)
         .then(deletes => {
           // console.log(deleted);
@@ -43,7 +43,7 @@ router.delete("/:id", validateActionId, (req, res) => {
         });
     })
     .catch(error => {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({ error: "not working" });
     });
 });
 
@@ -70,11 +70,11 @@ function validateActionId(req, res, next) {
       if (action) {
         next();
       } else {
-        res.status(404).json({ error: error.messgae });
+        res.status(404).json({ error: "n/a" });
       }
     })
     .catch(error => {
-      res.status(500).json({ error: error.message });
+      res.status(404).json({ error: "wrong ID" });
     });
 }
 
@@ -82,7 +82,7 @@ function validateAction(req, res, next) {
   // do your magic!
   const aData = req.body;
 
-  if ((aData.notes, data.description)) {
+  if ((aData.notes, aData.description)) {
     next();
   } else {
     // req.text = text;
