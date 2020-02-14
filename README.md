@@ -40,13 +40,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+:This week i've learned that
+in Express we are are allowed to create APIs, and learned that Expresses main feature is Middleware.We are also alllowed to build web services like REST.
+
 - [ ] Describe Middleware?
+
+:Middleware is the software that runs between request and response.
 
 - [ ] Describe a Resource?
 
+:A resource id the data with set mothods that they operate on. It's usually data stored in the database with the endpoints using HTTP methods.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+:The API can return a response status code of (200) basically the specific response to the request.
+
 - [ ] How can we partition our application into sub-applications?
+
+:We can do this by using Routers.
 
 ## Minimum Viable Product
 
